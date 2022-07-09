@@ -11,9 +11,9 @@ def mobile(request):
 # Create your views here.
 def home(request):
     global user
-    foodname = food.objects.get()
-    fooduser = {'user':user,'foodname':foodname}
-    return render(request, 'main.html', {'fooduser':fooduser})
+    user = request.user
+    foodname = food.objects.all()
+    return render(request, 'main.html', {'user':user,'foodname':foodname})
 
 def category(request):
     return render(request, 'category.html')

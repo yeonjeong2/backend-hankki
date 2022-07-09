@@ -20,17 +20,17 @@
 
     <div class="content">
         <div class="user-box">
-            <h2>{{ fooduser.user }}님 환영합니다</h2>
+            <h2>{{ user.username }}님 환영합니다</h2>
         </div>
 
         <div class="ingredient-box">
-            <h2>{{ fooduser.user }}님의 재료</h2>
+            <h2>{{ user.username }}님의 재료</h2>
                 <div class="list-box">
-                    {% for i in fooduser %}
+                    {% for i in foodname %}
                         <div class="list color1">{{ i.foodname }}</div>
                     {% endfor %}
                 </div>
-        </div>
+        </div> 
 
 
         <div class="menu-box">
