@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한끼슥싹</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'image/Logo.svg' %}" class="logo"/>
+    </div>
+    <hr>
+    <div class="recipe">
+
+        <div class="icon-box">
+            <img src="{% static 'image/interests.png' %}" class="interests"/>
+            <p>레시피 고르기</p>
+        </div>
+
+        <div class="refresh-box">
+            <div class="material-symbols-outlined" style="color:white;">refresh
+                    <p>새로고침</p>
+            </div>
+        </div>
+    </div>
+    <div class="content-box">
+        <div class="content">
+            <div class="top">
+                <div class="content" onclick="SelectRecipe(event)">
+                    <div class="content-data">
+                        <img src="{% static 'image/chicken.png' %}"/>
+                            <p>이름 1</p>
+                    </div>
+                </div>
+                <div class="content" onclick="SelectRecipe(event)">
+                    <div class="content-data">
+                        <img src="{% static 'image/chicken.png' %}"/>
+                            <p>이름 2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="end">
+                <div class="content" onclick="SelectRecipe(event)">
+                    <div class="content-data">
+                        <img src="{% static 'image/chicken.png' %}"/>
+                            <p>이름 3</p>
+                    </div>
+                </div>
+                <div class="content" onclick="SelectRecipe(event)">
+                    <div class="content-data">
+                        <img src="{% static 'image/chicken.png' %}"/>
+                        <p>이름 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <form class="secret-form" id="secret-form" action="" method="">
+            <input type="text" name="recipe" id="recipe-name" value=""/>
+        </form>
+
+        <script src="{% static 'js/selectRecipe.js' %}"></script>
+</body>
+</html>
