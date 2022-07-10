@@ -12,7 +12,7 @@ def mobile(request):
 def home(request):
     global user
     user = request.user
-    foodname = food.objects.all()
+    foodname = food.objects.filter(user = request.user)
     return render(request, 'main.html', {'user':user,'foodname':foodname})
 
 def category(request):
